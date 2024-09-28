@@ -3,24 +3,41 @@
     class PoliceCar : Vehicle
     {
         //constant string as TypeOfVehicle wont change allong PoliceCar instances
-        private const string typeOfVehicle = "Police Car"; 
+        private const string typeOfVehicle = "Police Car";
         private bool isPatrolling;
         private SpeedRadar speedRadar;
 
-        public PoliceCar(string plate) : base(typeOfVehicle, plate)
+
+        public PoliceCar(string plate, bool hasRadar) : base(typeOfVehicle, plate)
         {
             isPatrolling = false;
-            speedRadar = new SpeedRadar();
+            if (hasRadar)
+            {
+                speedRadar = new SpeedRadar();  // Create a Radar instance if the boolean is true
+            }
+        }
+
+        public bool HasRadar()
+        {
+            return speedRadar != null;
         }
 
         public void UseRadar(Vehicle vehicle)
         {
             if (isPatrolling)
             {
-                speedRadar.TriggerRadar(vehicle);
-                string meassurement = speedRadar.GetLastReading();
-                Console.WriteLine(WriteMessage($"Triggered radar. Result: {meassurement}"));
+                if (HasRadar())
+                {
+                    speedRadar.TriggerRadar(vehicle);
+                    string meassurement = speedRadar.GetLastReading();
+                    Console.WriteLine(WriteMessage($"Triggered radar. Result: {meassurement}"));
+                }
+                else
+                {
+                    Console.WriteLine(WriteMessage($"has no radar."));
+                }
             }
+
             else
             {
                 Console.WriteLine(WriteMessage($"has no active radar."));

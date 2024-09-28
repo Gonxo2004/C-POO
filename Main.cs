@@ -7,8 +7,8 @@
         {
             Taxi taxi1 = new Taxi("0001 AAA");
             Taxi taxi2 = new Taxi("0002 BBB");
-            PoliceCar policeCar1 = new PoliceCar("0001 CNP");
-            PoliceCar policeCar2 = new PoliceCar("0002 CNP");
+            PoliceCar policeCar1 = new PoliceCar("0001 CNP",true);
+            PoliceCar policeCar2 = new PoliceCar("0002 CNP",true);
 
             Console.WriteLine(taxi1.WriteMessage("Created"));
             Console.WriteLine(taxi2.WriteMessage("Created"));
