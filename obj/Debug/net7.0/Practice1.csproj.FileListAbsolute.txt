@@ -1,0 +1,15 @@
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.csproj.AssemblyReference.cache
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.AssemblyInfoInputs.cache
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.AssemblyInfo.cs
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.csproj.CoreCompileInputs.cache
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/bin/Debug/net7.0/Practice1
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/bin/Debug/net7.0/Practice1.deps.json
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/bin/Debug/net7.0/Practice1.runtimeconfig.json
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/bin/Debug/net7.0/Practice1.dll
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/bin/Debug/net7.0/Practice1.pdb
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.dll
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/refint/Practice1.dll
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.pdb
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/Practice1.genruntimeconfig.cache
+/Users/gonzaloborracherogarcia/Desktop/3 IMAT/PARADIGMAS/PRÁCTICA/Practica2/P1-vehicle_example/C-POO/obj/Debug/net7.0/ref/Practice1.dll

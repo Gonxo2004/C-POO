@@ -3,27 +3,52 @@ namespace Practice1
 {
 	public class PoliceStation
 	{
-		private int number; // Added to difference between Police Stations
 		public List<PoliceCar> registeredCars { get; private set; }
 
-        public PoliceStation(int number)
+        public PoliceStation()
 		{
-			this.number = number;
             registeredCars = new List<PoliceCar>();
+            Console.WriteLine(WriteMessage("Created"));
         }
 
+        // Add policeCar 
 		public void RegisterCar(PoliceCar policeCar)
 		{
-			registeredCars.Add(policeCar);
-		}
-		public void ActivateAlarm(Vehicle vehicle)
+            registeredCars.Add(policeCar);
+            if (policeCar.HasRadar())  // Check if has radar
+                Console.WriteLine(WriteMessage($"Added PoliceCar with plate {policeCar.GetPlate()} and radar."));
+            else
+                Console.WriteLine(WriteMessage($"Added PoliceCar with plate {policeCar.GetPlate()}."));
+
+        }
+
+        // Set the chasing vehicle to all of the policeCars
+		public void ActivateAlarm(string plate)
 		{
 			for(int i=0; i < registeredCars.Count; i++)
 			{
 				PoliceCar car = registeredCars[i];
-				car.SetChasingVehicle(vehicle);
+				if (car.IsPatrolling())
+				{
+                    car.SetChasingVehicle(plate);
+					car.SetIsChasing(true);                  
+                }
+				
 			}
-		}
-	}
+            Console.WriteLine(WriteMessage($"Alarm activated. Vehicle with plate {plate} is being chased."));
+        }
+
+        //Override ToString() method with class information
+        public override string ToString()
+        {
+            return $"Police Station";
+        }
+
+        //Implment interface with Vechicle message structure
+        public string WriteMessage(string message)
+        {
+            return $"{this}: {message}";
+        }
+    }
 }
 

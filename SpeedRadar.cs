@@ -6,30 +6,37 @@
         private string plate;
         private float speed;
         private float legalSpeed = 50.0f;
+        private bool catched;
         public List<float> SpeedHistory { get; private set; }
 
         public SpeedRadar()
         {
             plate = "";
             speed = 0f;
+            catched = false;
             SpeedHistory = new List<float>();
         }
 
-        public void TriggerRadar(Vehicle vehicle)
+        public void TriggerRadar(VehicleWithPlate vehicle)
         {
             plate = vehicle.GetPlate();
             speed = vehicle.GetSpeed();
             SpeedHistory.Add(speed);
         }
-        
+        public bool GetCatched()
+        {
+            return catched;
+        }
         public string GetLastReading()
         {
             if (speed > legalSpeed)
             {
+                catched = true;
                 return WriteMessage("Catched above legal speed.");
             }
             else
             {
+                catched = false;
                 return WriteMessage("Driving legally.");
             }
         }
