@@ -5,37 +5,53 @@
 
         static void Main()
         {
+            // Create the policeStation and city
+            PoliceStation policeStation = new PoliceStation();
+            City city = new City(policeStation);
+
+            // Create the taxis
             Taxi taxi1 = new Taxi("0001 AAA");
             Taxi taxi2 = new Taxi("0002 BBB");
-            PoliceCar policeCar1 = new PoliceCar("0001 CNP",true);
-            PoliceCar policeCar2 = new PoliceCar("0002 CNP",true);
+            Taxi taxi3 = new Taxi("0003 CCC");
 
             Console.WriteLine(taxi1.WriteMessage("Created"));
             Console.WriteLine(taxi2.WriteMessage("Created"));
+            Console.WriteLine(taxi3.WriteMessage("Created"));
+
+            // Add them to the city
+            city.AddTaxiLicense(taxi1);
+            city.AddTaxiLicense(taxi2);
+            city.AddTaxiLicense(taxi3);
+
+            // Create the policeCars
+            PoliceCar policeCar1 = new PoliceCar("0001 CNP", true, policeStation);
+            PoliceCar policeCar2 = new PoliceCar("0002 CNP", false, policeStation);
+            PoliceCar policeCar3 = new PoliceCar("0003 CNP", true, policeStation);
+
             Console.WriteLine(policeCar1.WriteMessage("Created"));
             Console.WriteLine(policeCar2.WriteMessage("Created"));
+            Console.WriteLine(policeCar3.WriteMessage("Created"));
 
-            policeCar1.StartPatrolling();
+            // Add them to the policeStation
+            policeStation.RegisterCar(policeCar1);
+            policeStation.RegisterCar(policeCar2);
+            policeStation.RegisterCar(policeCar3);
+
+            // PoliceCars start patrolling
+            foreach (PoliceCar policeCar in policeStation.registeredCars)
+            {
+                policeCar.StartPatrolling();
+            }
+
+            // Try to use radar
+            policeCar2.UseRadar(taxi1);
+
+            // Catch taxi
+            taxi1.StartRide();
             policeCar1.UseRadar(taxi1);
 
-            taxi2.StartRide();
-            policeCar2.UseRadar(taxi2);
-            policeCar2.StartPatrolling();
-            policeCar2.UseRadar(taxi2);
-            taxi2.StopRide();
-            policeCar2.EndPatrolling();
-
-            taxi1.StartRide();
-            taxi1.StartRide();
-            policeCar1.StartPatrolling();
-            policeCar1.UseRadar(taxi1);
-            taxi1.StopRide();
-            taxi1.StopRide();
-            policeCar1.EndPatrolling();
-
-            policeCar1.PrintRadarHistory();
-            policeCar2.PrintRadarHistory();
-
+            // Remove license
+            city.RemoveTaxiLicense(taxi1);
         }
     }
 }
